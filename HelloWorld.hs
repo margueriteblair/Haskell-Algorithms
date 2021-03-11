@@ -1,0 +1,1 @@
+main = interact $ (++) "Hello, World.\n"
