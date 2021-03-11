@@ -3,10 +3,10 @@
 
 main :: IO ()
 main = do
-    print (elem [1, 2, 3, 4, 5] 4)
+    print (Main.elem [1, 2, 3, 4, 5] 7)
 
-elem :: (Eq a) => a -> [a] -> Bool
+elem :: (Eq a) => [a] -> a -> Bool
 elem [] _ = False
-elem xs a 
-    | (head xs) == a = True
-    | otherwise Main.elem (tail xs) a
+elem (x:xs) a
+    | x == a = True
+    | otherwise = Main.elem xs a
