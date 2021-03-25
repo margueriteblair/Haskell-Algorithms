@@ -1,7 +1,7 @@
 import System.IO
 
 main = do
-    print (fac 6)
+    print (fac 1)
 
 fac :: Int -> Int
 fac 0 = 1
