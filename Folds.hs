@@ -11,3 +11,6 @@ import System.IO
 foldr :: (a -> b -> b) -> b -> [a] -> b
 foldr f v [] = v
 foldr f v (x:xs) = f x (Main.foldr f v xs)
+
+sum :: Num a => [a] -> a
+sum xs = Prelude.foldr (+) 0 xs
