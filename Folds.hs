@@ -19,3 +19,14 @@ sum xs = Prelude.foldr (+) 0 xs
 
 product :: Num a => [a] -> a
 product xs = Prelude.foldr (*) 1 xs
+
+{-
+In foldl the combining function associates to the left, meaning
+the left most elements get evaluated first.
+
+Therefore, it's definition using recursion will be:
+-}
+
+foldl :: (a -> b -> a) -> a -> [b] -> a
+foldl f v [] = v
+foldl f v (x:xs) = Main.foldl f (f v x) xs
