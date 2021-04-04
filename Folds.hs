@@ -32,4 +32,10 @@ foldl f v [] = v
 foldl f v (x:xs) = Main.foldl f (f v x) xs
 
 lengthr :: [a] -> Int
-lengthr = Main.foldr (\_ n -> n + 1) 0
+lengthr xs = Main.foldr (\_ n -> n + 1) 0 xs
+
+--If we want to make the same function with foldl we have to reserve
+--the arguments for the combining function to avoid a type error
+
+lengthl :: [a] -> Int
+lengthl xs = Prelude.foldl (\n _ -> n + 1) 0 xs
