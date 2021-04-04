@@ -7,7 +7,7 @@ The right most elements of the data structure will be evaluated first.
 import System.IO
 
 main = do
-    print (Main.product [1,2,3,4])
+    print (Main.lengthr [1,2,3,4])
 --the foldr function is defined as such:
 
 foldr :: (a -> b -> b) -> b -> [a] -> b
@@ -30,3 +30,6 @@ Therefore, it's definition using recursion will be:
 foldl :: (a -> b -> a) -> a -> [b] -> a
 foldl f v [] = v
 foldl f v (x:xs) = Main.foldl f (f v x) xs
+
+lengthr :: [a] -> Int
+lengthr = Main.foldr (\_ n -> n + 1) 0
