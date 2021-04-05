@@ -25,3 +25,6 @@ data Rank = Deuce
     | King
     | Ace
     deriving (Show, Eq, Ord, Enum)
+
+
+type Card = (Rank, Suit)
