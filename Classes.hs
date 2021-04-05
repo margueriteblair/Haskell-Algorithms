@@ -1,3 +1,7 @@
+import System.IO
+
+main = do
+    print (Main.min 5 3)
 {- 
 We can think of classes as collections of types that will support operations of the class
 
@@ -16,8 +20,8 @@ Enum - enumeration types (like a suit on a deck of cards would be)
 
 --The Eq class supports the comparison methods
 --The equals & /= method are type defined as the following:
-== :: a -> a -> Bool
-/= :: a -> a -> Bool
+-- == :: a -> a -> Bool
+-- /= :: a -> a -> Bool
 
 --Char, Bool, Int, etc are instances of the Eq class, and that's why we can compare them
 
@@ -31,10 +35,10 @@ class (Eq a) => Ord a where
 --Ord class also will use the min & max methods as defined:
 
 min x y
-  | x <= y = x
+  | x Main.<= y = x
   | otherwise = y
 
 max x y
-  | x <= y = y
+  | x Main.<= y = y
   | otherwise = x
 
