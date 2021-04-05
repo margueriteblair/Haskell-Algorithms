@@ -9,7 +9,7 @@ data Suit = Hearts
     | Diamonds
     | Spades
     | Clubs
-    deriving (Show)
+    deriving (Show, Enum)
 
 data Rank = Deuce
     | Three
@@ -28,3 +28,11 @@ data Rank = Deuce
 
 
 type Card = (Rank, Suit)
+
+type Deck = [Card] -- a deck is a list of cards lmao
+
+--We have all the required types for buildinga  deck now, so let's make a function for that.
+--Using a list comprehension
+
+buildDeck :: Deck
+buildDeck = [(rank, suit) | rank <- [Deuce .. Ace], suit <- [Hearts .. Clubs]]
