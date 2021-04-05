@@ -46,3 +46,8 @@ class (Eq a) => Ord a where
       | x Main.<= y = y
       | otherwise = x
 
+{-
+The Show class is used for types whose values can be represented as strings
+and support the 'show' method. All basic types of Haskell are also instances of the show class
+-}
+
