@@ -49,5 +49,11 @@ class (Eq a) => Ord a where
 {-
 The Show class is used for types whose values can be represented as strings
 and support the 'show' method. All basic types of Haskell are also instances of the show class
+
+The Read class supports the reading and conversion of string representation of
+values into actual types using the 'read' method. All basic types in Haskell
+are also instances of the Read class.
+
+Sometimes, we have to specify the type to be read in cases where the intended cannot be inferred.
 -}
 
