@@ -10,3 +10,18 @@ data Suit = Hearts
     | Spades
     | Clubs
     deriving (Show)
+
+data Rank = Deuce
+    | Three
+    | Four
+    | Five
+    | Six
+    | Seven
+    | Eight
+    | Nine
+    | Ten
+    | Jack
+    | Queen
+    | King
+    | Ace
+    deriving (Show, Eq, Ord, Enum)
