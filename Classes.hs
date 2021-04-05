@@ -34,9 +34,9 @@ class (Eq a) => Ord a where
 
 --Ord class also will use the min & max methods as defined:
 
-    x < y = x <= y && x /= y
-    x > y = y < x
-    x >= y = y <= x
+    x < y = x Main.<= y && x /= y
+    x > y = y Main.< x
+    x >= y = y Main.<= x
 
     min x y
       | x Main.<= y = x
