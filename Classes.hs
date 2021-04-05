@@ -55,5 +55,15 @@ values into actual types using the 'read' method. All basic types in Haskell
 are also instances of the Read class.
 
 Sometimes, we have to specify the type to be read in cases where the intended cannot be inferred.
+
+The last class we will look at here is Enum class which supports operations on sequentially ordered types.
 -}
+
+--We'll use the 'deriving' keyword to make a new type into an instance of other
+--Built-in classes, without the need for defining any of the methods.
+--For example, Bool can be declared as:
+data Bool = False | True
+    deriving (Eq, Prelude.Ord, Show, Read)
+
+
 
