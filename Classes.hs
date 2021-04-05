@@ -24,3 +24,17 @@ Enum - enumeration types (like a suit on a deck of cards would be)
 --The Ord class requires any type that wants to be an instance of it to first be an instance of the Eq
 --class by using a class constraint, and to also support the >, <, <=, >=
 
+class (Eq a) => Ord a where
+    (<), (<=), (>), (>=) :: a -> a -> Bool
+    min, max :: a -> a -> a
+
+--Ord class also will use the min & max methods as defined:
+
+min x y
+  | x <= y = x
+  | otherwise = y
+
+max x y
+  | x <= y = y
+  | otherwise = x
+
