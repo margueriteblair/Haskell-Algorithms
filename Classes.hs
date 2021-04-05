@@ -1,7 +1,7 @@
 import System.IO
 
 main = do
-    print (Main.min 5 3)
+    print (Prelude.min 5 3)
 {- 
 We can think of classes as collections of types that will support operations of the class
 
@@ -34,11 +34,15 @@ class (Eq a) => Ord a where
 
 --Ord class also will use the min & max methods as defined:
 
-min x y
-  | x Main.<= y = x
-  | otherwise = y
+    x < y = x <= y && x /= y
+    x > y = y < x
+    x >= y = y <= x
 
-max x y
-  | x Main.<= y = y
-  | otherwise = x
+    min x y
+      | x Main.<= y = x
+      | otherwise = y
+
+    max x y
+      | x Main.<= y = y
+      | otherwise = x
 
