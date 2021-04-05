@@ -14,3 +14,10 @@ Enum - enumeration types (like a suit on a deck of cards would be)
 
 -}
 
+--The Eq class supports the comparison methods
+--The equals & /= method are type defined as the following:
+== :: a -> a -> Bool
+/= :: a -> a -> Bool
+
+--Char, Bool, Int, etc are instances of the Eq class, and that's why we can compare them
+
