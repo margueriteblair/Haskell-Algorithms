@@ -17,9 +17,7 @@ getInt = do
 
 getSecretNumber :: IO Int
 getSecretNumber = do
-    -- hSetEcho stdin False
     number <- getInt
-    -- hSetEcho stdin True
     return number
   
 
