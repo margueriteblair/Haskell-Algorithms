@@ -1,7 +1,7 @@
+{-# LANGUAGE MultiWayIf #-}
 {-
 We'll be making a guessing game to be played between two players.
 -}
-{-# LANGUAGE MultiWayIf #-}
 
 numbers :: IO ()
 numbers = do
@@ -17,10 +17,11 @@ getInt = do
 
 getSecretNumber :: IO Int
 getSecretNumber = do
-    hSetEcho stdin False
+    -- hSetEcho stdin False
     number <- getInt
-    hSetEcho stdin True
+    -- hSetEcho stdin True
     return number
+  
 
 play :: Int -> IO ()
 play number = do
