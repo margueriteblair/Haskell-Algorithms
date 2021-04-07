@@ -1,7 +1,5 @@
 {-# LANGUAGE MultiWayIf #-}
-{-
-We'll be making a guessing game to be played between two players.
--}
+{-We'll be making a guessing game to be played between two players-}
 
 numbers :: IO ()
 numbers = do
